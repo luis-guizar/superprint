@@ -103,10 +103,12 @@
                         <strong><span style="font-family: Lato;">{{ fechasolicitud }}</span></strong>
                     </td>
                     <td style="width: 24.6269%; text-align: center; height: 20px;">
-                        <strong><span style="font-family: Lato;"><span style="font-size: 12pt;">{{ codecliente }}</span></span></strong>
+                        <strong><span style="font-family: Lato;"><span style="font-size: 12pt;">{{ codecliente
+                                    }}</span></span></strong>
                     </td>
                     <td style="width: 24.6269%; text-align: center; height: 20px;">
-                        <strong><span style="font-family: Lato;"><span style="font-size: 12pt;">{{ cantsoli }}</span></span></strong>
+                        <strong><span style="font-family: Lato;"><span style="font-size: 12pt;">{{ cantsoli
+                                    }}</span></span></strong>
                     </td>
                 </tr>
                 <tr style="height: 18px;">
@@ -125,7 +127,8 @@
                 </tr>
                 <tr style="height: 20px;">
                     <td style="width: 24.6269%; text-align: center; height: 20px;">
-                        <strong><span style="font-family: Lato;"><span style="font-size: 12pt;">{{ resistencia }}</span></span></strong>
+                        <strong><span style="font-family: Lato;"><span style="font-size: 12pt;">{{ resistencia
+                                    }}</span></span></strong>
                     </td>
                     <td style="width: 24.6269%; text-align: center; height: 20px;">
                         <span style="font-size: 12pt;">
@@ -189,7 +192,8 @@
                                         </span>
                                     </p>
                                     <p style="line-height: 1; text-align: center;">
-                                        <span style="font-family: Lato; font-size: 50pt; background-color: #000000; color: #ffffff;">
+                                        <span
+                                            style="font-family: Lato; font-size: 50pt; background-color: #000000; color: #ffffff;">
                                             {{ numpallet }}
                                         </span>
                                     </p>
@@ -197,7 +201,8 @@
                                         <span style="font-family: Lato;">
                                             <!-- QR code rendered using Jinja2 custom filter -->
                                             <span style="text-align: center;">
-                                                {{ codigoqr | render_qrcode(style='width: 200px;height:200px;background: white;') }}
+                                                {{ codigoqr | render_qrcode(style='width: 200px;height:200px;background:
+                                                white;') }}
                                             </span>
                                         </span>
                                     </p>

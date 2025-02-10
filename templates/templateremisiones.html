@@ -17,7 +17,8 @@
                             <span style="color: #ffffff;"><strong><span
                                         style="font-family: Lato; font-size: 14pt;"><span
                                             style="font-size: 10pt;">No.&nbsp; </span>{{numremision
-                                        }}&nbsp;&nbsp;</span></strong></span></td>
+                                        }}&nbsp;&nbsp;</span></strong></span>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -35,7 +36,8 @@
                                     style="width: 96.4442%; height: 118px; background-color: #ffffff; border: 1px solid #ffffff;">
                                     <span style="color: #ffffff;"><img
                                             src="https://apitemplateio-user.s3-ap-southeast-1.amazonaws.com/15166/22140/f4873cd2-721f-4a6d-a2e2-6b02d1af16a5.png"
-                                            alt="" width="97" height="97" /></span></td>
+                                            alt="" width="97" height="97" /></span>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -69,7 +71,8 @@
                             <tr style="height: 18.4px;">
                                 <td
                                     style="width: 49.7686%; height: 18.4px; text-align: center; background-color: #ffffff; border: 1px solid #ffffff;">
-                                    <span style="font-family: Lato; font-size: 8pt;"><strong>Fecha</strong>:</span></td>
+                                    <span style="font-family: Lato; font-size: 8pt;"><strong>Fecha</strong>:</span>
+                                </td>
                                 <td
                                     style="width: 49.7686%; height: 18.4px; background-color: #ffffff; border: 1px solid #ffffff;">
                                     <div class="prow" style="text-align: center;"><span
@@ -200,29 +203,32 @@
             </tr>
             <tr class="apitemplate-is-content-hidden" style="height: 18.4px;">
                 <td style="background-color: #ced4d9; height: 18.4px; width: 99.951%; text-align: center; vertical-align: middle;"
-                    colspan="4">{%for item in items%}</td>
+                    colspan="4">{%for partida in partidas%}</td>
             </tr>
             <tr style="height: 18.4px;">
                 <td
                     style="width: 12.6635%; background-color: #ffffff; text-align: center; vertical-align: top; height: 18.4px;">
-                    <span style="font-family: Montserrat; font-size: 10pt;">{{item.cant}}</span></td>
+                    <span style="font-family: Montserrat; font-size: 10pt;">{{partida.cant}}</span>
+                </td>
                 <td
                     style="width: 59.6946%; background-color: #ffffff; text-align: left; vertical-align: top; height: 18.4px;">
-                    <strong><span style="font-family: Montserrat; font-size: 10pt;">{{item.producto}}</span></strong>
+                    <strong><span style="font-family: Montserrat; font-size: 10pt;">{{partida.producto}}</span></strong>
                 </td>
                 <td
                     style="width: 11.3113%; background-color: #ffffff; text-align: right; vertical-align: top; height: 18.4px;">
-                    <span style="font-family: Montserrat; font-size: 10pt;">{{item.preciou}}</span></td>
+                    <span style="font-family: Montserrat; font-size: 10pt;">{{partida.preciou}}</span>
+                </td>
                 <td
                     style="width: 16.2816%; background-color: #ffffff; text-align: right; vertical-align: top; height: 18.4px;">
-                    <span style="font-family: Montserrat; font-size: 10pt;">{{item.importe}}</span></td>
+                    <span style="font-family: Montserrat; font-size: 10pt;">{{partida.importe}}</span>
+                </td>
             </tr>
             <tr>
                 <td style="width: 12.6635%; background-color: #ffffff; text-align: center; vertical-align: top;"><span
                         style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span></td>
                 <td style="width: 59.6946%; background-color: #ffffff; text-align: left; vertical-align: top;"><span
-                        style="font-size: 8pt;"><span style="font-family: Montserrat;">{{item.lblnumoc}}
-                            {{item.numoc}}</span></span></td>
+                        style="font-size: 8pt;"><span style="font-family: Montserrat;">{{partida.lblnumoc}}
+                            {{partida.numoc}}</span></span></td>
                 <td style="width: 11.3113%; background-color: #ffffff; text-align: right; vertical-align: top;"><span
                         style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span></td>
                 <td style="width: 16.2816%; background-color: #ffffff; text-align: right; vertical-align: top;"><span
@@ -231,91 +237,101 @@
             <tr style="height: 18.4px;">
                 <td
                     style="width: 12.6635%; background-color: #ffffff; text-align: center; vertical-align: top; height: 18.4px;">
-                    <span style="font-family: Montserrat; font-size: 8pt;">&nbsp;</span></td>
+                    <span style="font-family: Montserrat; font-size: 8pt;">&nbsp;</span>
+                </td>
                 <td
                     style="width: 59.6946%; background-color: #ffffff; text-align: left; vertical-align: top; height: 18.4px;">
                     <span
-                        style="font-family: Montserrat; font-size: 8pt;">{{item.lbltiposcore}}<strong>{{item.tiposcore}}</strong></span>
+                        style="font-family: Montserrat; font-size: 8pt;">{{partida.lbltiposcore}}<strong>{{partida.tiposcore}}</strong></span>
                 </td>
                 <td
                     style="width: 11.3113%; background-color: #ffffff; text-align: right; vertical-align: top; height: 18.4px;">
-                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span></td>
+                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span>
+                </td>
                 <td
                     style="width: 16.2816%; background-color: #ffffff; text-align: right; vertical-align: top; height: 18.4px;">
-                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span></td>
+                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span>
+                </td>
             </tr>
             <tr style="height: 43.2px;">
                 <td
                     style="width: 12.6635%; background-color: #ffffff; text-align: center; vertical-align: top; height: 43.2px;">
-                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span></td>
+                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span>
+                </td>
                 <td
                     style="width: 59.6946%; background-color: #ffffff; text-align: left; vertical-align: top; height: 43.2px;">
                     <table style="border-collapse: collapse; width: 100.195%; height: 36.8px;" border="1">
                         <tbody>
                             <tr style="height: 18.4px;">
                                 <td style="width: 13.196%; height: 18.4px; border: 1px solid #ffffff;"><strong><span
-                                            style="font-family: Montserrat; font-size: 8pt;">{{item.lbls1}}</span></strong>
+                                            style="font-family: Montserrat; font-size: 8pt;">{{partida.lbls1}}</span></strong>
                                 </td>
                                 <td style="width: 13.196%; height: 18.4px; border: 1px solid #ffffff;"><strong><span
-                                            style="font-family: Montserrat; font-size: 8pt;">{{item.lbls2}}</span></strong>
+                                            style="font-family: Montserrat; font-size: 8pt;">{{partida.lbls2}}</span></strong>
                                 </td>
                                 <td style="width: 13.196%; height: 18.4px; border: 1px solid #ffffff;"><strong><span
-                                            style="font-family: Montserrat; font-size: 8pt;">{{item.lbls3}}</span></strong>
+                                            style="font-family: Montserrat; font-size: 8pt;">{{partida.lbls3}}</span></strong>
                                 </td>
                                 <td style="width: 13.196%; height: 18.4px; border: 1px solid #ffffff;"><strong><span
-                                            style="font-family: Montserrat; font-size: 8pt;">{{item.lbls4}}</span></strong>
+                                            style="font-family: Montserrat; font-size: 8pt;">{{partida.lbls4}}</span></strong>
                                 </td>
                                 <td style="width: 13.196%; height: 18.4px; border: 1px solid #ffffff;"><strong><span
-                                            style="font-family: Montserrat; font-size: 8pt;">{{item.lbls5}}</span></strong>
+                                            style="font-family: Montserrat; font-size: 8pt;">{{partida.lbls5}}</span></strong>
                                 </td>
                                 <td style="width: 13.196%; height: 18.4px; border: 1px solid #ffffff;"><strong><span
-                                            style="font-family: Montserrat; font-size: 8pt;">{{item.lbls6}}</span></strong>
+                                            style="font-family: Montserrat; font-size: 8pt;">{{partida.lbls6}}</span></strong>
                                 </td>
                                 <td style="width: 13.2055%; height: 18.4px; border: 1px solid #ffffff;"><strong><span
-                                            style="font-family: Montserrat; font-size: 8pt;">{{item.lbls7}}</span></strong>
+                                            style="font-family: Montserrat; font-size: 8pt;">{{partida.lbls7}}</span></strong>
                                 </td>
                             </tr>
                             <tr style="height: 18.4px;">
                                 <td style="width: 13.196%; height: 18.4px; border: 1px solid #ffffff;"><span
-                                        style="font-family: Montserrat; font-size: 8pt;">{{item.s1}}</span></td>
+                                        style="font-family: Montserrat; font-size: 8pt;">{{partida.s1}}</span></td>
                                 <td style="width: 13.196%; height: 18.4px; border: 1px solid #ffffff;"><span
-                                        style="font-family: Montserrat; font-size: 8pt;">{{item.s2}}</span></td>
+                                        style="font-family: Montserrat; font-size: 8pt;">{{partida.s2}}</span></td>
                                 <td style="width: 13.196%; height: 18.4px; border: 1px solid #ffffff;"><span
-                                        style="font-family: Montserrat; font-size: 8pt;">{{item.s3}}</span></td>
+                                        style="font-family: Montserrat; font-size: 8pt;">{{partida.s3}}</span></td>
                                 <td style="width: 13.196%; height: 18.4px; border: 1px solid #ffffff;"><span
-                                        style="font-family: Montserrat; font-size: 8pt;">{{item.s4}}</span></td>
+                                        style="font-family: Montserrat; font-size: 8pt;">{{partida.s4}}</span></td>
                                 <td style="width: 13.196%; height: 18.4px; border: 1px solid #ffffff;"><span
-                                        style="font-family: Montserrat; font-size: 8pt;">{{item.s5}}</span></td>
+                                        style="font-family: Montserrat; font-size: 8pt;">{{partida.s5}}</span></td>
                                 <td style="width: 13.196%; height: 18.4px; border: 1px solid #ffffff;"><span
-                                        style="font-family: Montserrat; font-size: 8pt;">{{item.s6}}</span></td>
+                                        style="font-family: Montserrat; font-size: 8pt;">{{partida.s6}}</span></td>
                                 <td style="width: 13.2055%; height: 18.4px; border: 1px solid #ffffff;"><span
-                                        style="font-family: Montserrat; font-size: 8pt;">{{item.s7}}</span></td>
+                                        style="font-family: Montserrat; font-size: 8pt;">{{partida.s7}}</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </td>
                 <td
                     style="width: 11.3113%; background-color: #ffffff; text-align: right; vertical-align: top; height: 43.2px;">
-                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span></td>
+                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span>
+                </td>
                 <td
                     style="width: 16.2816%; background-color: #ffffff; text-align: right; vertical-align: top; height: 43.2px;">
-                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span></td>
+                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span>
+                </td>
             </tr>
             <tr style="height: 26.4px;">
                 <td
                     style="width: 12.6635%; background-color: #ffffff; text-align: center; vertical-align: top; height: 26.4px;">
-                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span></td>
+                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span>
+                </td>
                 <td
                     style="width: 59.6946%; background-color: #ffffff; text-align: left; vertical-align: top; height: 26.4px;">
                     <span style="font-family: Lato; font-size: 8pt;"><span
-                            style="font-family: Montserrat;">{{item.lbltratamiento}}<strong>
-                                {{item.tratamiento}}</strong></span></span></td>
+                            style="font-family: Montserrat;">{{partida.lbltratamiento}}<strong>
+                                {{partida.tratamiento}}</strong></span></span>
+                </td>
                 <td
                     style="width: 11.3113%; background-color: #ffffff; text-align: right; vertical-align: top; height: 26.4px;">
-                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span></td>
+                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span>
+                </td>
                 <td
                     style="width: 16.2816%; background-color: #ffffff; text-align: right; vertical-align: top; height: 26.4px;">
-                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span></td>
+                    <span style="font-family: Montserrat; font-size: 10pt;">&nbsp;</span>
+                </td>
             </tr>
             <tr class="apitemplate-is-content-hidden" style="height: 18.4px;">
                 <td style="background-color: #ced4d9; height: 18.4px; width: 99.951%; text-align: center; vertical-align: top;"

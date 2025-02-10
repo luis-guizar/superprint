@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Factura - {{ numfactura }}</title>
@@ -11,6 +12,7 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Arial', sans-serif;
       font-size: 14px;
@@ -18,6 +20,7 @@
       padding: 20px;
       background: #f7f7f7;
     }
+
     .invoice-container {
       max-width: 800px;
       margin: auto;
@@ -25,6 +28,7 @@
       padding: 20px;
       border: 1px solid #ddd;
     }
+
     header {
       border-bottom: 2px solid #333;
       padding-bottom: 10px;
@@ -33,36 +37,49 @@
       justify-content: space-between;
       align-items: center;
     }
+
     header img {
       max-width: 150px;
       height: auto;
     }
+
     .invoice-info {
       text-align: right;
     }
+
     .invoice-info h1 {
       font-size: 24px;
       margin-bottom: 5px;
     }
-    .details, .totals {
+
+    .details,
+    .totals {
       width: 100%;
       margin-bottom: 20px;
     }
-    .details th, .details td, .totals th, .totals td {
+
+    .details th,
+    .details td,
+    .totals th,
+    .totals td {
       padding: 8px;
       border: 1px solid #ccc;
     }
+
     .details th {
       background: #eaeaea;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
     }
+
     .section {
       margin-bottom: 20px;
     }
+
     .section-title {
       font-weight: bold;
       margin-bottom: 10px;
@@ -71,10 +88,12 @@
       border-bottom: 1px solid #ddd;
       padding-bottom: 5px;
     }
+
     .qr-code {
       text-align: center;
       margin-top: 20px;
     }
+
     .footer {
       text-align: center;
       font-size: 12px;
@@ -84,6 +103,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="invoice-container">
     <!-- Header -->
@@ -102,7 +122,7 @@
         <p>Fecha: {{ fechadeldia }}</p>
       </div>
     </header>
-    
+
     <!-- Customer Information -->
     <section class="section">
       <div class="section-title">Datos del Cliente</div>
@@ -112,7 +132,7 @@
         RFC: {{ customer_rfc }}
       </p>
     </section>
-    
+
     <!-- Items Table -->
     <section class="section">
       <div class="section-title">Detalle de la Factura</div>
@@ -126,18 +146,18 @@
           </tr>
         </thead>
         <tbody>
-          {% for item in items %}
+          {% for partida in partidas %}
           <tr>
-            <td>{{ item.description }}</td>
-            <td style="text-align:center;">{{ item.quantity }}</td>
-            <td style="text-align:right;">{{ "$" ~ "{:,.2f}".format(item.unit_price) }}</td>
-            <td style="text-align:right;">{{ "$" ~ "{:,.2f}".format(item.importe) }}</td>
+            <td>{{ partida.description }}</td>
+            <td style="text-align:center;">{{ partida.quantity }}</td>
+            <td style="text-align:right;">{{ "$" ~ "{:,.2f}".format(partida.unit_price) }}</td>
+            <td style="text-align:right;">{{ "$" ~ "{:,.2f}".format(partida.importe) }}</td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
     </section>
-    
+
     <!-- Totals -->
     <section class="section">
       <table class="totals">
@@ -157,7 +177,7 @@
         </tbody>
       </table>
     </section>
-    
+
     <!-- QR Code (optional) -->
     {% if codigoqr %}
     <section class="qr-code">
@@ -165,7 +185,7 @@
       {{ codigoqr | render_qrcode('width:150px;') }}
     </section>
     {% endif %}
-    
+
     <!-- Footer -->
     <div class="footer">
       <p>Factura generada electrónicamente conforme a la legislación fiscal vigente en México.</p>
@@ -173,4 +193,5 @@
     </div>
   </div>
 </body>
+
 </html>
