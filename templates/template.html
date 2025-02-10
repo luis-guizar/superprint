@@ -1,0 +1,242 @@
+<div class="prow">&nbsp;</div>
+<table style="border-collapse: collapse; width: 100.178%; height: 72px;" border="0">
+    <tbody>
+        <tr style="height: 72px;">
+            <td style="width: 30.5693%; vertical-align: top; height: 72px;">
+                <p style="text-align: left;">
+                    <span style="font-size: 6pt;">
+                        <!-- Static image (can be replaced with a dynamic URL if needed) -->
+                        <img src="https://apitemplateio-user.s3-ap-southeast-1.amazonaws.com/15166/34489/9a0c2283-cd44-41dd-8608-f83818f96310.png"
+                            alt="" width="65" height="65" /><br />
+                    </span>
+                </p>
+            </td>
+            <td style="width: 69.4918%; vertical-align: top; height: 72px;">
+                <!-- Jinja2 placeholders for dynamic data -->
+                <p style="text-align: left;">
+                    <span style="font-size: 6pt;">
+                        <strong><span style="font-family: Lato; text-align: start;">{{ company }}</span></strong>
+                    </span>
+                </p>
+                <div>
+                    <span style="font-size: 6pt;">
+                        <strong><span style="font-family: Lato; text-align: start;">{{ domifiscal }}</span></strong>
+                    </span>
+                </div>
+                <div class="prow">
+                    <span style="font-size: 6pt;">
+                        <strong><span style="font-family: Lato; text-align: start;">RFC: {{ rfckit }}</span></strong>
+                    </span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="prow">
+    <div class="prow" style="text-align: center;">
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    </div>
+    <table style="border-collapse: collapse; width: 100%; height: 65px;">
+        <tbody>
+            <tr style="height: 65px;">
+                <td style="width: 99.5316%; text-align: center; height: 65px;">
+                    <strong><span style="font-family: Lato; font-size: 30pt;">*** {{ uso }} ***</span></strong>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="prow">&nbsp;</div>
+<div class="prow">
+    <table style="border-collapse: collapse; width: 100%; height: 106px;" border="1">
+        <tbody>
+            <tr style="height: 68px;">
+                <td style="width: 99.5408%; height: 68px; text-align: center;">
+                    <div class="prow"><span style="font-family: Lato; font-size: 10pt;">CLIENTE</span></div>
+                    <div class="prow">
+                        <strong><span style="font-family: Lato; font-size: 20pt;">{{ cliente }}</span></strong>
+                    </div>
+                    <div class="prow">&nbsp;</div>
+                </td>
+            </tr>
+            <tr style="height: 18px;">
+                <td style="width: 99.5408%; text-align: center; height: 18px;">
+                    <div class="prow" style="text-align: left;">
+                        <strong><span style="font-family: Lato; font-size: 8pt;">DIRECCION DE ENTREGA</span></strong>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 20px;">
+                <td style="width: 99.5408%; text-align: center; height: 20px;">
+                    <div class="prow" style="text-align: left;">
+                        <span style="font-size: 12pt;">
+                            <strong><span style="font-family: Lato;">{{ domientrega }}</span></strong>
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="prow">&nbsp;</div>
+    <div class="prow">
+        <table style="border-collapse: collapse; width: 100%; height: 76px;" border="1">
+            <tbody>
+                <tr style="height: 18px;">
+                    <td style="width: 24.6269%; text-align: center; height: 18px;">
+                        <span style="font-size: 8pt;"><span style="font-family: Lato;">No. KIT</span></span>
+                    </td>
+                    <td style="width: 24.6269%; text-align: center; height: 18px;">
+                        <span style="font-size: 8pt;"><span style="font-family: Lato;">FECHA SOLICITUD</span></span>
+                    </td>
+                    <td style="width: 24.6269%; text-align: center; height: 18px;">
+                        <span style="font-size: 8pt;"><span style="font-family: Lato;">CODIGO CLIENTE</span></span>
+                    </td>
+                    <td style="width: 24.6269%; text-align: center; height: 18px;">
+                        <span style="font-size: 8pt;"><span style="font-family: Lato;">CANT. SOLICITADA</span></span>
+                    </td>
+                </tr>
+                <tr style="height: 20px;">
+                    <td style="width: 24.6269%; text-align: center; height: 20px;">
+                        <strong><span style="font-family: Lato;">{{ ockit }}</span></strong>
+                    </td>
+                    <td style="width: 24.6269%; text-align: center; height: 20px;">
+                        <strong><span style="font-family: Lato;">{{ fechasolicitud }}</span></strong>
+                    </td>
+                    <td style="width: 24.6269%; text-align: center; height: 20px;">
+                        <strong><span style="font-family: Lato;"><span style="font-size: 12pt;">{{ codecliente }}</span></span></strong>
+                    </td>
+                    <td style="width: 24.6269%; text-align: center; height: 20px;">
+                        <strong><span style="font-family: Lato;"><span style="font-size: 12pt;">{{ cantsoli }}</span></span></strong>
+                    </td>
+                </tr>
+                <tr style="height: 18px;">
+                    <td style="width: 24.6269%; text-align: center; height: 18px;">
+                        <span style="font-size: 8pt;"><span style="font-family: Lato;">RESISTENCIA</span></span>
+                    </td>
+                    <td style="width: 24.6269%; text-align: center; height: 18px;">
+                        <span style="font-size: 8pt;"><span style="font-family: Lato;">FLAUTA</span></span>
+                    </td>
+                    <td style="width: 24.6269%; text-align: center; height: 18px;">
+                        <span style="font-size: 8pt;"><span style="font-family: Lato;">ANCHO</span></span>
+                    </td>
+                    <td style="width: 24.6269%; text-align: center; height: 18px;">
+                        <span style="font-size: 8pt;"><span style="font-family: Lato;">LARGO</span></span>
+                    </td>
+                </tr>
+                <tr style="height: 20px;">
+                    <td style="width: 24.6269%; text-align: center; height: 20px;">
+                        <strong><span style="font-family: Lato;"><span style="font-size: 12pt;">{{ resistencia }}</span></span></strong>
+                    </td>
+                    <td style="width: 24.6269%; text-align: center; height: 20px;">
+                        <span style="font-size: 12pt;">
+                            <strong><span style="font-family: Lato;">{{ flauta }}</span></strong>
+                        </span>
+                    </td>
+                    <td style="width: 24.6269%; text-align: center; height: 20px;">
+                        <strong><span style="font-family: Lato;">{{ ancho }}</span></strong>
+                    </td>
+                    <td style="width: 24.6269%; text-align: center; height: 20px;">
+                        <strong><span style="font-family: Lato;">{{ largo }}</span></strong>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="prow">&nbsp;</div>
+        <div class="prow">
+            <table style="border-collapse: collapse; width: 100%; height: 69px;" border="1">
+                <tbody>
+                    <tr style="height: 23px;">
+                        <td style="width: 17.4653%; height: 23px;">&nbsp;</td>
+                        <td style="width: 64.7152%; text-align: center; height: 23px;">
+                            <span style="font-size: 14pt;">
+                                <strong><span style="font-family: Lato;">{{ producto }}</span></strong>
+                            </span>
+                        </td>
+                        <td style="width: 17.8195%; height: 23px;">&nbsp;</td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 17.4653%; height: 18px;">&nbsp;</td>
+                        <td style="width: 64.7152%; text-align: center; height: 18px;">
+                            <span style="font-size: 8pt;">
+                                <span style="font-family: Lato;">CANTIDAD EN PALLET</span>
+                            </span>
+                        </td>
+                        <td style="width: 17.8195%; height: 18px;">&nbsp;</td>
+                    </tr>
+                    <tr style="height: 28px;">
+                        <td style="width: 17.4653%; height: 28px;">
+                            <span style="font-family: Lato;"><strong>Lote: {{ fechalote }}</strong></span>
+                        </td>
+                        <td style="width: 64.7152%; text-align: center; height: 28px;">
+                            <strong><span style="font-family: Lato; font-size: 20pt;">{{ cantpallet }}</span></strong>
+                        </td>
+                        <td style="width: 17.8195%; height: 28px;">
+                            <span style="font-family: Lato;"><strong>FOLIO: {{ folio }}</strong></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="prow">
+                <div class="prow">&nbsp;</div>
+                <div class="prow">
+                    <table style="border-collapse: collapse; width: 100%;">
+                        <tbody>
+                            <tr>
+                                <td style="width: 99.2895%;">
+                                    <p style="line-height: 1; text-align: center;">
+                                        <span style="font-size: 10pt;">
+                                            <strong><span style="font-family: Lato;">No. de Serie Pallet</span></strong>
+                                        </span>
+                                    </p>
+                                    <p style="line-height: 1; text-align: center;">
+                                        <span style="font-family: Lato; font-size: 50pt; background-color: #000000; color: #ffffff;">
+                                            {{ numpallet }}
+                                        </span>
+                                    </p>
+                                    <p style="line-height: 1; text-align: center;">
+                                        <span style="font-family: Lato;">
+                                            <!-- QR code rendered using Jinja2 custom filter -->
+                                            <span style="text-align: center;">
+                                                {{ codigoqr | render_qrcode(style='width: 200px;height:200px;background: white;') }}
+                                            </span>
+                                        </span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="prow">&nbsp;</div>
+                <div class="prow">
+                    <table style="border-collapse: collapse; width: 100%; height: 18px;">
+                        <tbody>
+                            <tr style="height: 18px;">
+                                <td style="width: 99.5316%; height: 18px;">
+                                    <span style="font-family: Lato; font-size: 6pt;">{{ avisoprivacidad }}</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="prow">&nbsp;</div>
+                    <div class="prow">
+                        <table style="border-collapse: collapse; width: 100%; height: 18px;">
+                            <tbody>
+                                <tr style="height: 18px;">
+                                    <td style="width: 27.3154%; height: 18px;">
+                                        <span style="font-family: Lato; font-size: 10pt;">{{ isoversion }}</span>
+                                    </td>
+                                    <td style="width: 44.7838%; text-align: center; height: 18px;">
+                                        <span style="font-family: Lato; font-size: 10pt;">{{ isofecha }}</span>
+                                    </td>
+                                    <td style="width: 27.9008%; text-align: right; height: 18px;">
+                                        <span style="font-family: Lato; font-size: 10pt;">{{ isorev }}</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Factura - {{ numfactura }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      color: #333;
+      padding: 20px;
+      background: #f7f7f7;
+    }
+    .invoice-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+    header {
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      max-width: 150px;
+      height: auto;
+    }
+    .invoice-info {
+      text-align: right;
+    }
+    .invoice-info h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    .details, .totals {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .details th, .details td, .totals th, .totals td {
+      padding: 8px;
+      border: 1px solid #ccc;
+    }
+    .details th {
+      background: #eaeaea;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      color: #555;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    .qr-code {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="invoice-container">
+    <!-- Header -->
+    <header>
+      <div class="vendor">
+        <img src="{{ logo_url }}" alt="Logo">
+        <p>
+          <strong>{{ vendor_name }}</strong><br>
+          {{ vendor_address }}<br>
+          RFC: {{ vendor_rfc }}
+        </p>
+      </div>
+      <div class="invoice-info">
+        <h1>Factura</h1>
+        <p>No: {{ numfactura }}</p>
+        <p>Fecha: {{ fechadeldia }}</p>
+      </div>
+    </header>
+    
+    <!-- Customer Information -->
+    <section class="section">
+      <div class="section-title">Datos del Cliente</div>
+      <p>
+        <strong>{{ customer_name }}</strong><br>
+        {{ customer_address }}<br>
+        RFC: {{ customer_rfc }}
+      </p>
+    </section>
+    
+    <!-- Items Table -->
+    <section class="section">
+      <div class="section-title">Detalle de la Factura</div>
+      <table class="details">
+        <thead>
+          <tr>
+            <th>Descripción</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Importe</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in items %}
+          <tr>
+            <td>{{ item.description }}</td>
+            <td style="text-align:center;">{{ item.quantity }}</td>
+            <td style="text-align:right;">{{ "$" ~ "{:,.2f}".format(item.unit_price) }}</td>
+            <td style="text-align:right;">{{ "$" ~ "{:,.2f}".format(item.importe) }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- Totals -->
+    <section class="section">
+      <table class="totals">
+        <tbody>
+          <tr>
+            <td style="text-align:right; width:75%;"><strong>Subtotal:</strong></td>
+            <td style="text-align:right;">{{ "$" ~ "{:,.2f}".format(subtotal) }}</td>
+          </tr>
+          <tr>
+            <td style="text-align:right;"><strong>IVA (16%):</strong></td>
+            <td style="text-align:right;">{{ "$" ~ "{:,.2f}".format(tax) }}</td>
+          </tr>
+          <tr>
+            <td style="text-align:right;"><strong>Total:</strong></td>
+            <td style="text-align:right;"><strong>{{ "$" ~ "{:,.2f}".format(total) }}</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- QR Code (optional) -->
+    {% if codigoqr %}
+    <section class="qr-code">
+      <div class="section-title">Código QR</div>
+      {{ codigoqr | render_qrcode('width:150px;') }}
+    </section>
+    {% endif %}
+    
+    <!-- Footer -->
+    <div class="footer">
+      <p>Factura generada electrónicamente conforme a la legislación fiscal vigente en México.</p>
+      <p>Si tiene dudas o requiere información adicional, contáctenos.</p>
+    </div>
+  </div>
+</body>
+</html>
